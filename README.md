@@ -42,17 +42,29 @@ $vi package.json
 
 {
   "name": "hello-world-app",
+  
   "version": "1.0.0",
+  
   "description": "A simple Hello World web application",
+  
   "main": "app.js",
+  
   "scripts": {
+  
     "start": "node app.js"
+    
   },
+ 
   "author": "Your Name",
+  
   "license": "MIT",
+  
   "dependencies": {
+  
     "express": "^4.17.1"
+    
   }
+  
 }
 
 
