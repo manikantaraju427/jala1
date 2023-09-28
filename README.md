@@ -109,7 +109,7 @@ $npm install express
 
 After installing Express.js, i can start application:
 
-$node app.js      (This command will start your Node.js application )
+$node app.js      (This command will start my Node.js application )
 
 Server is running on port 3000
 
