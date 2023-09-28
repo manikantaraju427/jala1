@@ -68,6 +68,73 @@ $vi package.json
 }
 
 
+# Create a app.js file
+
+$vi app.js
+
+const express = require('express');
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.get('/', (req, res) => {
+  res.send('Hello, World!');
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
+});
+
+
+### Installed the Express.js framework, which we'll use to create a basic web server:
+
+# step 1: Install Node.js and npm
+
+$sudo apt update
+
+$sudo apt install nodejs npm
+
+Verified that Node.js and npm were installed successfully:
+
+$node -v
+
+$npm -v       
+
+ installed 
+Now that npm is successfully installed, than  install the Express.js framework and run my "Hello, World!" application:
+
+In  project directory
+# Step 2: Install Express.js and Run Application
+
+$npm install express
+
+After installing Express.js, i can start application:
+
+$node app.js      (This command will start your Node.js application )
+
+Server is running on port 3000
+
+http://100.25.151.1/:3000     run  google  web browse
+
+Hello, World! this is jala project 1 by manikanta raju dibbidi   ( out put)
+
+# Push Code to GitHub 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
