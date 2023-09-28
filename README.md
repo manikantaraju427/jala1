@@ -119,7 +119,67 @@ Hello, World! this is jala project 1 by manikanta raju dibbidi   ( out put)
 
 # Push Code to GitHub 
 
+ $git init
 
+$git add .
+
+ $git commit -m "commiting"
+
+ $git push origin main
+
+### Access the Jenkins Workspace:
+
+Log in to  Jenkins server   Navigate to the Project Workspace:
+
+In the Jenkins dashboard, find and click on my project/job's name to access its workspace.
+
+Set up a Jenkins pipeline to automate the deployment of a real-world web application to AWS. The pipeline consists of several stages, each with specific tasks.
+Clone the Code Repository:
+
+The Jenkins pipeline starts by checking out the code from  code repository. The repository should be hosted on Github
+
+### Dockerfile Creation:
+
+Create a Dockerfile within the same code repository. This file is used to define the instructions for building a Docker image of  web application.
+Build Docker Image: 
+
+In the "Build" stage, Jenkins builds a Docker image using the Dockerfile. It also ensures that unit tests, if any, pass successfully.
+Push Docker Image to ECR:
+
+In the "Push Docker Image to ECR" stage, the Docker image is pushed to Amazon Elastic Container Registry (ECR). This step requires AWS credentials for authentication.
+
+$aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 400558793627.dkr.ecr.us-east-1.amazonaws.com
+
+$docker tag my-web-app:latest 400558793627.dkr.ecr.us-east-1.amazonaws.com/jala-project:latest
+
+$docker push 400558793627.dkr.ecr.us-east-1.amazonaws.com/jala-project:latest
+
+# Deploy to EC2 Machine:
+
+The "Deploy to EC2" stage is responsible for deploying the Docker image to an Amazon EC2 instance. It connects to the EC2 instance using SSH.
+
+# Open Specific Inbound Port on EC2:
+
+The EC2 instance opens a specific inbound port, allowing access only to an admin user for security purposes.
+Validation and Success Message:
+
+# Jenkins performs validation tasks as part of the pipeline and displays a successful message if all stages are completed successfully.
+
+# Email Notification:
+
+The pipeline is configured to send email notifications. If any stage fails, an email notification will be sent containing the status of each job.
+
+# Domain Registration with AWS:
+
+Register a domain with AWS to make  web application accessible via a custom domain name. The specific steps for domain registration may vary.
+
+# note
+
+1)this is free tier account based my budget issues iam not afford to buy Domain names 
+
+2) ec2 instance also terminatted part of free tier
+
+3)thats why every step of my project screenshots uploaded in GITHUB account with project code 
 
 
 
