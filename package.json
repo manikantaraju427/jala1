@@ -1,0 +1,14 @@
+{
+  "name": "hello-world-app",
+  "version": "1.0.0",
+  "description": "A simple Hello World web application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "manikanta raju",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
